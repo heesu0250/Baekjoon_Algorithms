@@ -1,20 +1,21 @@
 #include <stdio.h>
-int main() {
-    int n;           
-    int a[100];       
-    int v;            
-    int cnt = 0;  
- 
-    scanf("%d", &n);
- 
+
+int main(void) {
+    int n, v, count = 0; 
+    scanf("%d", &n); 
+
+    int list[n]; 
+   
     for (int i = 0; i < n; i++) {
-        scanf("%d", &a[i]);
+        scanf("%d", &list[i]);
     }
     scanf("%d", &v);
- 
-    for (int j = 0; j < n; j++) {
-        if (a[j] == v)    
-            cnt++;       
+
+    for (int i = 0; i < n; i++) {
+        if (list[i] == v) {
+            count++;
+        }
     }
-    printf("%d", cnt);
+    printf("%d\n", count);
+    return 0;
 }
